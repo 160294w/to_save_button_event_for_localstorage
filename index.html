@@ -2,8 +2,12 @@
 <html>
   <body>
     <h1>ボタン</h1>
-    <button type="button" onclick="save_to_clickevent()">ボタンをクリック</button>
+    <button type="button" onclick="save_to_clickevent()">ボタンをクリック(イベントをローカルストレージに保存)</button>
+    <br>
     <button type="button" onclick="get_final_clickevent()">localStorageから最後に押したボタンの日付を取得</button>
+    <br>
+    <button type="button" onclick="delete_localstorage()">localStorageからデータを削除</button>
+    <br>
   </body>
 </html>
 
@@ -17,5 +21,9 @@
   }
   function get_final_clickevent() {
       alert(localStorage.getItem("date_of_final_push_button"));
+  }
+  function delete_localstorage() {
+      localStorage.removeItem("date_of_final_push_button")
+      alert("delete localstorage");
   }
 </script>
