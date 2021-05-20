@@ -2,11 +2,11 @@
 <html>
   <body>
     <h1>ボタン</h1>
-    <button type="button" onclick="save_to_clickevent()">ボタンをクリック(イベントをローカルストレージに保存)</button>
+    <button class="click" type="button" onclick="save_to_clickevent()">ボタンをクリック(イベントをローカルストレージに保存)</button>
     <br>
-    <button type="button" onclick="get_final_clickevent()">localStorageから最後に押したボタンの日付を取得</button>
+    <button class="get_date" type="button" onclick="get_final_clickevent()">localStorageから最後に押したボタンの日付を取得</button>
     <br>
-    <button type="button" onclick="delete_localstorage()">localStorageからデータを削除</button>
+    <button class="delete" type="button" onclick="delete_localstorage()">localStorageからデータを削除</button>
     <br>
   </body>
 </html>
