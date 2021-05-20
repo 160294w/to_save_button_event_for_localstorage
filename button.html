@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>ボタン</h1>
+    <button type="button" onclick="save_to_clickevent()">ボタンをクリック</button>
+    <button type="button" onclick="get_final_clickevent()">localStorageから最後に押したボタンの日付を取得</button>
+  </body>
+</html>
+
+<script>
+  // console.log(date1); // Sat Feb 01 2020 20:49:28 GMT+0900 (日本標準時)
+  // console.log(date1.toLocaleString()); // 2020/2/1 20:49:28
+  function save_to_clickevent() {
+      const date1 = new Date();
+      time = date1.toLocaleString();
+      localStorage.setItem("date_of_final_push_button", time);
+  }
+  function get_final_clickevent() {
+      alert(localStorage.getItem("date_of_final_push_button"));
+  }
+</script>
